@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Projekt Mirage</string>
+    <string name="TextboxHint">Enter your message...</string>
+    <string name="SettingsHeader">Settings</string>
+    <string name="clear_log_body">Your chat records are kept locally, click here to clear them (app restart needed)</string>
+    <string name="Clear_logs_header">Clear logs</string>
+    <string name="select_image_btnText">Select image</string>
+    <string name="user_avatar_header">User avatar</string>
+    <string name="bot_avatar_header">Bot avatar</string>
+    <string name="default_toggle">use default</string>
+    <string name="save_btn_desc">save button</string>
+    <string name="chatroom_header">Chatroom</string>
+    <string name="powered_credit">Powered by Brainshop.ai</string>
+    <string name="developed_credit">Developed by InLurker</string>
+    <string name="ver">Projekt Mirage: XuXiu v1.0</string>
+    <string name="link">github.com/InLurker/XuXiu</string>
+</resources>

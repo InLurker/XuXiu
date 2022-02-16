@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chatroom_background"
+    android:gravity="bottom"
+    tools:context=".ChatroomActivity">
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:isScrollContainer="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/SettingsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/varela_round"
+            android:paddingLeft="20dp"
+            android:text="Chatroom"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/settingsButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/ic_baseline_settings_24"
+                android:onClick="openSettings" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/infobutton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/ic_baseline_info_24"
+                android:onClick="openInfo" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerViewChats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/heading"
+        app:layout_constraintBottom_toTopOf="@+id/RelativeLayoutMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        app:layout_constraintVertical_bias="0.0"
+        android:paddingBottom="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/roundedsquare_layoutbackground"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <EditText
+            android:id="@+id/EditMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ButtonSend"
+            android:layout_alignBottom="@+id/ButtonSend"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toLeftOf="@+id/ButtonSend"
+            android:background="@drawable/roundedsquare_textbox"
+            android:fontFamily="@font/varela_round"
+            android:foregroundGravity="center_vertical|center"
+            android:hint="@string/TextboxHint"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:singleLine="true"
+            android:textColor="#2C2C2C"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="15sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ButtonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/roundedsquare_textbox"
+            android:backgroundTint="#ffb22c"
+            android:onClick="onClickSend"
+            android:src="@drawable/ic_baseline_send_24"
+            app:elevation="0dp"
+            app:fabCustomSize="48dp"
+            app:maxImageSize="30dp"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
